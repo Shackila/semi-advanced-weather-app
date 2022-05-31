@@ -54,7 +54,8 @@ function displayTemprature(response) {
   let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#main-icon");
   cityElement.innerHTML = response.data.name;
-  tempratureElement.innerHTML = Math.round(response.data.main.temp);
+  celsiusTemprature = response.data.main.temp;
+  tempratureElement.innerHTML = Math.round(celsiusTemprature);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = ` humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
@@ -69,11 +70,20 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemprature);
 }
-function displayfahrenheit(event) {
+function displayFahrenheit(event) {
   event.preventDefault();
-  alert("WE WILL SHOW YOU");
+  let tempratureElement = document.querySelector("#big-tempreture");
+  let FahrenheitTEmprature = (celsiusTemprature * 9 ) / 5 + 32;
+  tempratureElement.innerHTML = Math.round(FahrenheitTEmprature);
 }
-search("Tehran");
+function displayCelsius(event) {
+  event.preventDefault();
+  let tempratureElement = document.querySelector("#big-tempreture");
+  tempratureElement.innerHTML = Math.round(celsiusTemprature);
+}
+search("Tehran"); 
+
+celsiusTemprature = null;
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -85,3 +95,6 @@ form.addEventListener("submit", handleSubmit);
 
 let fahrenheitElement = document.querySelector("#fahrenheit-link");
 fahrenheitElement.addEventListener("click", displayFahrenheit);
+
+let celsiusElement = document.querySelector("#celsius-link");
+celsiusElement.addEventListener("click", displayCelsius);
