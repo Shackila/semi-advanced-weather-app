@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://unpkg.com/axios/dist/axios.min.js"
+      src="https://kit.fontawesome.com/4a50478382.js"
+    ></script>
+  </head>
+  <body>
+    <div class="weather-app-wrapper">
+      <div class="weather-app">
+        <h1>🌝</h1>
+        <h2>
+          <form id="city-form">
+            <input
+              type="text"
+              placeholder="City"
+              id="search-input"
+              autocomplete="off"
+              autofocus="on"
+              max-width:
+              100px
+            />
+            <button type="sumbit" value="search" id="sumbit" class="butt">
+              search
+            </button>
+          </form>
+        </h2>
+        <br />
+        <div class="container">
+          <div class="row">
+            <div class="card1">
+              <div class="card-body1">
+                <ul>
+                  <li id="city-name">City</li>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="clearfix">
+                        <li>
+                          <img
+                            alt="Clear"
+                            src=""
+                            id="main-icon"
+                            class="float-left"
+                          />
+                        </li>
+                      </div>
+                    </div>
+                    <li>
+                      <span id="big-tempreture" class="float-left">🌡️ </span>
+                    </li>
+                    <span><strong> °C |</strong></span>
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </div>
+                  <li class="description" id="description">description</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="card2">
+              <div class="card-body2">
+                <div class="parag" id="current-day">day:</div>
+                <span id="current-time" class="parag">time:</span>
+                <br />
+                <div class="parag" id="humidity">humidity:</div>
+                <div class="parag" id="wind">Wind:</div>
+                <img
+                  class="img"
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/035/013/original/Weather_Isometric.png?1653288852"
+                  alt="WeatherPerson"
+                />
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="row row-cols-1 row-cols-md-6">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" id="day2">Monday</h5>
+                  <p class="card-text">
+                    <br />
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    <br /><br />
+                    20°C
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" id="day3">Tuesday</h5>
+                  <p class="card-text">
+                    <br />
+                    <i class="fa-solid fa-sun"></i>
+                    <br /><br />
+                    22°C
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" id="day4">Wednesday</h5>
+                  <p class="card-text">
+                    <br />
+                    <i class="fa-solid fa-sun"></i>
+                    <br /><br />
+                    18°C
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" id="day5">Thursday</h5>
+                  <p class="card-text">
+                    <br />
+                    <i class="fa-solid fa-sun"></i>
+                    <br /><br />
+                    25°C
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" id="day6">Friday</h5>
+                  <p class="card-text">
+                    <br />
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    <br /><br />
+                    26°C
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title" id="day7">Saturday</h5>
+                  <p class="card-text">
+                    <br />
+                    <i class="fa-solid fa-wind"></i>
+                    <br /><br />
+                    23°C
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <footer class="footer">
+          <a href="https://github.com/Shackila/weather-app"
+            >Open-source Code By Shakila<br
+          /></a>
+        </footer>
+        <script src="F:\SheCodes\GitHub\semi-advanced-weather-app\src\app.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
