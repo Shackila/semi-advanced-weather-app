@@ -73,7 +73,7 @@ function search(city) {
 function displayFahrenheit(event) {
   event.preventDefault();
   let tempratureElement = document.querySelector("#big-tempreture");
-  let FahrenheitTEmprature = (celsiusTemprature * 9 ) / 5 + 32;
+  let FahrenheitTEmprature = (celsiusTemprature * 9) / 5 + 32;
   tempratureElement.innerHTML = Math.round(FahrenheitTEmprature);
 }
 function displayCelsius(event) {
@@ -81,7 +81,7 @@ function displayCelsius(event) {
   let tempratureElement = document.querySelector("#big-tempreture");
   tempratureElement.innerHTML = Math.round(celsiusTemprature);
 }
-search("Tehran"); 
+search("Tehran");
 
 celsiusTemprature = null;
 
