@@ -46,6 +46,7 @@ button {
   font-size: 25px;
 }
 #search-input {
+  margin-bottom: 20px;
   padding: 5px;
   color: #171719;
   font-size: 15px;
@@ -77,45 +78,49 @@ button {
 /* Add some padding inside the card container */
 
 .card1 {
-  border-radius: 5px;
-  border: 0px;
+  border-radius: 30px;
+  border: 1px solid #fff1eb;
   position: relative;
   left: 1%;
   margin-top: 0px;
   padding: 0px;
   width: 50%;
   transition: 0.3s;
-  background: linear-gradient(
-    to right,
-    #ff6b08,
-    #247291,
-    #f8da5b,
-    #247291,
-    #ff6b08,
-    #f8da5b,
-    #bbe4e9,
-    #ff6b08,
-    #247291,
-    #247291,
-    #f8da5b,
-    #bbe4e9
-  );
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  height: 12.5rem;
 }
 .card2 {
-  border-radius: 5px;
+  border-radius: 30px;
+  border: 1px solid #fff1eb;
   position: relative;
   right: -64%;
-  margin-top: -180px;
+  margin-top: -222px;
   padding: 0px;
   width: 35%;
   transition: 0.3s;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  height: 12.6rem;
 }
-.card:hover {
+.card3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    192deg,
+    rgb(220, 236, 245) 35%,
+    rgb(255, 241, 235) 88%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  border-radius: 30px;
+  width: 100%;
+  border: 1px solid #fff1eb;
+  height: 9rem;
+}
+.card3:hover {
   box-shadow: 0 8px 16px 0 #5585b5;
 }
 .card1:hover {
@@ -126,24 +131,35 @@ button {
 }
 .card-body {
   padding: 40px;
-  background: linear-gradient(to right, #ff6b08, #247291, #f8da5b, #247291);
+  background: linear-gradient(
+    to right,
+    #ff6b08,
+    #247291,
+    #247291,
+    #f8da5b,
+    #ff6b08,
+    #ff6b08
+  );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   font-size: 15px;
   font-weight: bold;
   text-align: center;
 }
-.card {
-  background-color: #eef2e2;
-  border-radius: 30px;
-  width: 100%;
-  border: none;
-  height: 11rem;
-}
+
 .card-body1 {
   padding: 10px 5px 10px 50px;
-
+  background: linear-gradient(
+    to right,
+    #ff6b08,
+    #247291,
+    #bbe4e9,
+    #f8da5b,
+    #ff6b08,
+    #ff6b08
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   height: 11rem;
 }
 .card-body2 {
