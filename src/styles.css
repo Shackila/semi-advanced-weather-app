@@ -4,7 +4,7 @@ body {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 footer {
-  font-size: 35px;
+  font-size: 28px;
   text-align: center;
   font-family: "Libre Barcode 39 Extended Text", cursive;
   background: #5585b5;
@@ -202,10 +202,6 @@ button {
   text-align: left;
   font-size: 30px;
   padding: 0px;
-}
-.parag {
-  font-size: 15px;
-  font-weight: bold;
 }
 .weather-app-wrapper {
   max-width: 1000px;
