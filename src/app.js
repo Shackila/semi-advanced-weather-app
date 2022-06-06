@@ -28,24 +28,51 @@ let hour = addZero(now.getHours());
 let minute = addZero(now.getMinutes());
 time.innerHTML = `${hour}:${minute}`;
 
-let secondDay = document.querySelector("#day2");
-secondDay.innerHTML = days[now.getDay() + 1];
+let secondDay = days[now.getDay() + 1];
 
-let thirdDay = document.querySelector("#day3");
-thirdDay.innerHTML = days[now.getDay() + 2];
+let thirdDay = days[now.getDay() + 2];
 
-let forthDay = document.querySelector("#day4");
-forthDay.innerHTML = days[now.getDay() + 3];
+let forthDay = days[now.getDay() + 3];
 
-let fifthDay = document.querySelector("#day5");
-fifthDay.innerHTML = days[now.getDay() + 4];
+let fifthDay = days[now.getDay() + 4];
 
-let sixthDay = document.querySelector("#day6");
-sixthDay.innerHTML = days[now.getDay() + 5];
+let sixthDay = days[now.getDay() + 5];
 
-let seventhDay = document.querySelector("#day7");
-seventhDay.innerHTML = days[now.getDay() + 6];
+let seventhDay = days[now.getDay() + 6];
 
+function displayForcast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row row-cols-1 row-cols-md-6">`;
+  let realDays = [
+    secondDay,
+    thirdDay,
+    forthDay,
+    fifthDay,
+    sixthDay,
+    seventhDay,
+  ];
+  realDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+              <div class="col">
+                <div class="card3">
+                  <div class="card-body">
+                    <h5 class="card-title" id="day2">${day}</h5>
+                    <p class="card-text">
+                      <br />
+                      <i class="fa-solid fa-cloud-sun"></i>
+                      <br />
+                      <span class="max-temprature">23° </span>
+                      <span class="min-temprature"> 10°</span>
+                    </p>
+                  </div>
+                </div>
+              </div>  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function displayTemprature(response) {
   let cityElement = document.querySelector("#city-name");
   let tempratureElement = document.querySelector("#big-tempreture");
@@ -98,3 +125,4 @@ fahrenheitElement.addEventListener("click", displayFahrenheit);
 
 let celsiusElement = document.querySelector("#celsius-link");
 celsiusElement.addEventListener("click", displayCelsius);
+displayForcast();
