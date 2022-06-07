@@ -25,31 +25,28 @@ function addZero(i) {
 }
 let time = document.querySelector("#current-time");
 let hour = addZero(now.getHours());
+let minute = addZero(now.getMinutes());
+time.innerHTML = `${hour}:${minute}`;
 if (hour < 12) {
   let h1 = document.querySelector("#header");
   h1.innerHTML = "Good Morning!";
-} else if (12 < hour < 18) {
-  let h1 = document.querySelector("#header");
-  h1.innerHTML = "Good Afternoon!";
-} else if (18 < hour) {
+} else if (hour > 21) {
   let h1 = document.querySelector("#header");
   h1.innerHTML = "Good Evening!";
+  document.getElementById("weather-app").style.background =
+    "linear-gradient(89.7deg, rgb(0, 0, 0) -10.7%, rgb(53, 92, 125) 88.8%)";
+      document.body.style.backgroundColor = "#dfe9f3";
+} else{
+  let h1 = document.querySelector("#header");
+  h1.innerHTML = "Good Afternoon!";
+  document.getElementById("weather-app").style.background =
+    "linear-gradient(181deg, rgb(253, 219, 146) 0%, rgb(209, 253, 255) 67%)";
 }
-let minute = addZero(now.getMinutes());
-time.innerHTML = `${hour}:${minute}`;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat",
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
 }
@@ -67,7 +64,7 @@ function displayForcast(response) {
               <div class="col">
                 <div class="card3">
                   <div class="card-body">
-                    <h5 class="card-title" id="day2">${formatDay(
+                    <h5 class="card-title" id="day">${formatDay(
                       forecastDay.dt
                     )}</h5>
                     <p class="card-text">

@@ -1,7 +1,7 @@
 body {
-  font-family: sans-serif;
+  font-family: "Poller One", cursive;
   padding: 0 20px;
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background: #fff1eb;
 }
 .weather-app-wrapper {
   max-width: 850px;
@@ -10,17 +10,15 @@ body {
 .weather-app {
   padding: 20px;
   border: 3px solid white;
-  border-radius: 10px;
+  border-radius: 25px;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 #header {
-  opacity: 0.5;
-  font-family: sans-serif;
+  font-family: "Poller One", cursive;
   font-size: 20px;
   text-align: center;
   margin-bottom: 15px;
-  background: linear-gradient(to right, #ff6b08, #247291, #bbe4e9, #f8da5b);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: #fff1eb;
 }
 #search-input {
   margin-bottom: 20px;
@@ -33,6 +31,7 @@ body {
   margin-left: -305px;
   position: relative;
   left: 38.5%;
+  background: #fff1eb;
 }
 #sumbit {
   padding: 5px;
@@ -55,9 +54,13 @@ body {
 li {
   list-style: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
+}
+#city-name {
+  font-size: 30px;
 }
 .card1 {
+  font-family: "Poller One", cursive;
   border-radius: 30px;
   border: 0.5px solid #fff1eb;
   position: relative;
@@ -77,6 +80,7 @@ li {
     to right,
     #ff6b08,
     #247291,
+    #247291,
     #bbe4e9,
     #f8da5b,
     #ff6b08,
@@ -90,12 +94,14 @@ li {
   box-shadow: 0 8px 16px 0 #5585b5;
 }
 .card2 {
+  font-family: "Poller One", cursive;
+  font-size: 15px;
   border-radius: 30px;
   border: 0.5px solid #fff1eb;
   position: relative;
   right: -64%;
   margin-top: -265px;
-  padding-top: 25px;
+  padding-top: 20px;
   width: 35%;
   transition: 0.3s;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
@@ -105,7 +111,17 @@ li {
 }
 .card-body2 {
   padding: 40px 60px 90px 30px;
-  background: linear-gradient(to right, #ff6b08, #247291, #bbe4e9, #f8da5b);
+  background: linear-gradient(
+    to right,
+    #ff6b08,
+    #247291,
+    #247291,
+    #ff6b08,
+    #bbe4e9,
+    #f8da5b,
+    #ff6b08,
+    #ff6b08
+  );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   height: 11rem;
@@ -116,10 +132,11 @@ li {
 .img {
   position: relative;
   top: -220%;
-  left: 60%;
+  left: 70%;
   width: 65%;
 }
 .card3 {
+  font-family: "Poller One", cursive;
   margin-top: 5px;
   margin-bottom: 10px;
   background: linear-gradient(
@@ -147,12 +164,14 @@ li {
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 13px;
   text-align: center;
 }
 .card3:hover {
   box-shadow: 0 8px 16px 0 #5585b5;
+}
+.card-title{
+  font-size:18px;
 }
 li #main-icon {
   font-size: 50px;
@@ -161,11 +180,9 @@ li #main-icon {
   font-size: 15px;
 }
 #big-tempreture {
-  font-size: 50px;
+  font-size: 40px;
 }
-#city-name {
-  font-size: 24px;
-}
+
 .weather-app .active {
   color: black;
 }
