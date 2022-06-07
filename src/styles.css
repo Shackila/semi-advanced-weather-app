@@ -1,5 +1,4 @@
 body {
-  font-family: "Poller One", cursive;
   padding: 0 20px;
   background: #fff1eb;
 }
@@ -14,7 +13,7 @@ body {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 #header {
-  font-family: "Poller One", cursive;
+  font-family: "Koh Santepheap", cursive;
   font-size: 20px;
   text-align: center;
   margin-bottom: 15px;
@@ -60,7 +59,7 @@ li {
   font-size: 30px;
 }
 .card1 {
-  font-family: "Poller One", cursive;
+  font-family: "Koh Santepheap", cursive;
   border-radius: 30px;
   border: 0.5px solid #fff1eb;
   position: relative;
@@ -94,7 +93,8 @@ li {
   box-shadow: 0 8px 16px 0 #5585b5;
 }
 .card2 {
-  font-family: "Poller One", cursive;
+  font-family: "Koh Santepheap", cursive;
+  font-weight: bold;
   font-size: 15px;
   border-radius: 30px;
   border: 0.5px solid #fff1eb;
@@ -136,7 +136,8 @@ li {
   width: 65%;
 }
 .card3 {
-  font-family: "Poller One", cursive;
+  font-family: "Koh Santepheap", cursive;
+  font-weight: bold;
   margin-top: 5px;
   margin-bottom: 10px;
   background: linear-gradient(
@@ -170,8 +171,8 @@ li {
 .card3:hover {
   box-shadow: 0 8px 16px 0 #5585b5;
 }
-.card-title{
-  font-size:18px;
+.card-title {
+  font-size: 18px;
 }
 li #main-icon {
   font-size: 50px;
