@@ -25,6 +25,16 @@ function addZero(i) {
 }
 let time = document.querySelector("#current-time");
 let hour = addZero(now.getHours());
+if (hour < 12) {
+  let h1 = document.querySelector("#header");
+  h1.innerHTML = "Good Morning!";
+} else if (12 < hour < 18) {
+  let h1 = document.querySelector("#header");
+  h1.innerHTML = "Good Afternoon!";
+} else if (18 < hour) {
+  let h1 = document.querySelector("#header");
+  h1.innerHTML = "Good Evening!";
+}
 let minute = addZero(now.getMinutes());
 time.innerHTML = `${hour}:${minute}`;
 
@@ -32,13 +42,13 @@ function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = [
-    "Sunday",
-    "Monday",
-    "Tueday",
-    "Wednesday",
-    "Thusday",
-    "Friday",
-    "Saturday",
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
   ];
 
   return days[day];
@@ -50,30 +60,31 @@ function displayForcast(response) {
   let forecastHTML = `<div class="row row-cols-1 row-cols-md-6">`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 7 && index != 0) {
       forecastHTML =
         forecastHTML +
         ` 
               <div class="col">
                 <div class="card3">
                   <div class="card-body">
-                    <h5 class="card-title" id="day2">${formatDay(forecastDay.dt)}</h5>
+                    <h5 class="card-title" id="day2">${formatDay(
+                      forecastDay.dt
+                    )}</h5>
                     <p class="card-text">
-                      <br />
                         <img
                           src="http://openweathermap.org/img/wn/${
                             forecastDay.weather[0].icon
                           }@2x.png"
                           alt=""
-                          width="42"
+                          width="60"
                         />
                       <br />
                       <span class="max-temprature">${Math.round(
                         forecastDay.temp.max
-                      )} |  </span>
+                      )}° |  </span>
                       <span class="min-temprature"> ${Math.round(
                         forecastDay.temp.min
-                      )}</span>
+                      )}°</span>
                     </p>
                   </div>
                 </div>

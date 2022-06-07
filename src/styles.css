@@ -3,33 +3,25 @@ body {
   padding: 0 20px;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
-footer {
-  font-size: 28px;
+#header {
+  font-family: sans-serif;
+  font-size: 20px;
   text-align: center;
-  font-family: "Libre Barcode 39 Extended Text", cursive;
-  background: #5585b5;
+  margin-bottom: 15px;
+  background: linear-gradient(
+    to right,
+    #ff6b08,
+    #247291,
+    #bbe4e9,
+    #f8da5b
+  );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-}
-.footer:hover {
-  background: linear-gradient(to right, #5585b5, #887575, #5585b5, #887575);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  transition: all 100ms ease-in-out;
-  cursor: pointer;
-}
-h1 {
-  font-size: 1px;
-  text-align: center;
-  margin-bottom: -25px;
 }
 h2 {
   margin: 0 auto;
 }
-p {
-  color: #f8da5b;
-  color: #247291;
-}
+
 button {
   padding: 6px;
   border: none;
@@ -53,7 +45,7 @@ button {
   border: 2px;
   border-radius: 5px;
   width: 90%;
-  margin-left: -352px;
+  margin-left: -305px;
   position: relative;
   left: 38.5%;
 }
@@ -65,7 +57,7 @@ button {
   color: #fff1eb;
   border: 2px;
   border-radius: 5px;
-  width: 6%;
+  width: 7.5%;
   position: relative;
   left: 38.5%;
 }
@@ -83,30 +75,30 @@ button {
   position: relative;
   left: 1%;
   margin-top: 0px;
-  padding: 0px;
+  padding-top: 25px;
   width: 50%;
   transition: 0.3s;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  height: 12.5rem;
+  height: 15rem;
 }
 .card2 {
   border-radius: 30px;
   border: 1px solid #fff1eb;
   position: relative;
   right: -64%;
-  margin-top: -222px;
-  padding: 0px;
+  margin-top: -265px;
+  padding-top: 25px;
   width: 35%;
   transition: 0.3s;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  height: 12.6rem;
+  height: 15rem;
 }
 .card3 {
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 10px;
   background: linear-gradient(
     192deg,
@@ -148,7 +140,7 @@ button {
 }
 
 .card-body1 {
-  padding: 10px 5px 10px 50px;
+  padding: 10px 5px 20px 50px;
   background: linear-gradient(
     to right,
     #ff6b08,
@@ -169,8 +161,8 @@ button {
   -webkit-background-clip: text;
   height: 11rem;
 }
-#main-icon {
-  font-size: 15px;
+li #main-icon {
+  font-size: 50px;
 }
 .title {
   font-size: 25px;
@@ -191,8 +183,8 @@ button {
 }
 .img {
   position: relative;
-  top: -260%;
-  left: 50%;
+  top: -220%;
+  left: 60%;
   width: 65%;
 }
 .temp {
@@ -204,13 +196,14 @@ button {
   padding: 0px;
 }
 .weather-app-wrapper {
-  max-width: 1000px;
+  max-width: 850px;
   margin: 30px auto;
+
 }
 .weather-app {
   padding: 20px;
-  border: 1px solid #f8da5b;
-  border-radius: 5px;
+  border: 3px solid white;
+  border-radius: 10px;
 }
 .card-title {
   font-size: 15px;
@@ -237,4 +230,20 @@ li {
 }
 .weather-app .active {
   color: black;
+}
+footer {
+  margin-top: 15px;
+  font-size: 28px;
+  text-align: center;
+  font-family: "Libre Barcode 39 Extended Text", cursive;
+  background: #5585b5;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.footer:hover {
+  background: linear-gradient(to right, #5585b5, #887575, #5585b5, #887575);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
 }
