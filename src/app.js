@@ -30,13 +30,13 @@ time.innerHTML = `${hour}:${minute}`;
 if (hour < 12) {
   let h1 = document.querySelector("#header");
   h1.innerHTML = "Good Morning!";
-} else if (hour > 21) {
+} else if (hour > 20) {
   let h1 = document.querySelector("#header");
   h1.innerHTML = "Good Evening!";
   document.getElementById("weather-app").style.background =
     "linear-gradient(89.7deg, rgb(0, 0, 0) -10.7%, rgb(53, 92, 125) 88.8%)";
-      document.body.style.backgroundColor = "#dfe9f3";
-} else{
+  document.body.style.backgroundColor = "#dfe9f3";
+} else {
   let h1 = document.querySelector("#header");
   h1.innerHTML = "Good Afternoon!";
   document.getElementById("weather-app").style.background =
