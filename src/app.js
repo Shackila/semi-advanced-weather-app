@@ -26,21 +26,24 @@ function addZero(i) {
 let time = document.querySelector("#current-time");
 let hour = addZero(now.getHours());
 let minute = addZero(now.getMinutes());
-time.innerHTML = `${hour}:${minute}`;
+
 if (hour < 12) {
   let h1 = document.querySelector("#header");
   h1.innerHTML = "Good Morning!";
+  time.innerHTML = `${hour}:${minute} AM`;
 } else if (hour > 20) {
   let h1 = document.querySelector("#header");
   h1.innerHTML = "Good Evening!";
   document.getElementById("weather-app").style.background =
     "linear-gradient(89.7deg, rgb(0, 0, 0) -10.7%, rgb(53, 92, 125) 88.8%)";
   document.body.style.backgroundColor = "#dfe9f3";
+  time.innerHTML = `${hour}:${minute} PM`;
 } else {
   let h1 = document.querySelector("#header");
   h1.innerHTML = "Good Afternoon!";
   document.getElementById("weather-app").style.background =
     "linear-gradient(181deg, rgb(253, 219, 146) 0%, rgb(209, 253, 255) 67%)";
+  time.innerHTML = `${hour}:${minute} PM`;
 }
 
 function formatDay(timestamp) {
@@ -106,7 +109,7 @@ function displayTemprature(response) {
   cityElement.innerHTML = response.data.name;
   celsiusTemprature = response.data.main.temp;
   tempratureElement.innerHTML = Math.round(celsiusTemprature);
-  descriptionElement.innerHTML = response.data.weather[0].description;
+  descriptionElement.innerHTML = `  ${response.data.weather[0].description}`;
   humidityElement.innerHTML = ` humidity: ${response.data.main.humidity}%`;
   windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
   iconElement.setAttribute(
