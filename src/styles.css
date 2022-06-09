@@ -173,6 +173,7 @@ li {
 }
 .card-title {
   font-size: 18px;
+  font-weight: bold;
 }
 li #main-icon {
   font-size: 50px;
