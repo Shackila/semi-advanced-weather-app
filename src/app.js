@@ -23,6 +23,9 @@ function addZero(i) {
   }
   return i;
 }
+var offset = date.getTimezoneOffset();
+console.log(offset);
+
 let time = document.querySelector("#current-time");
 let hour = addZero(now.getHours());
 let minute = addZero(now.getMinutes());
