@@ -23,7 +23,7 @@ function addZero(i) {
   }
   return i;
 }
-var offset = date.getTimezoneOffset();
+var offset = now.getTimezoneOffset();
 console.log(offset);
 
 let time = document.querySelector("#current-time");
